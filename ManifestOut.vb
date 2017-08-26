@@ -98,7 +98,7 @@ Private Sub buttonManifestOut_Click()
         
         'Check to see if the recordset actually contains rows
         If Not (rs.EOF And rs.BOF) Then
-            rs.MoveFirst 
+            rs.MoveFirst
             Do Until rs.EOF = True
             
                 'check if they are Bred Heifers, Bulls etc in these if statements
@@ -115,7 +115,7 @@ Private Sub buttonManifestOut_Click()
                         rs("LOC_Manifest_Out") = True
                         rs.Update
     
-                        'Move to the next record.
+                        'Move to the next record
                         countBredHeif = countBredHeif + 1
                     End If
                 End If
@@ -133,7 +133,7 @@ Private Sub buttonManifestOut_Click()
                         rs("LOC_Manifest_Out") = True
                         rs.Update
     
-                        'Move to the next record.
+                        'Move to the next record
                         countBulls = countBulls + 1
                     End If
                 End If
@@ -145,13 +145,13 @@ Private Sub buttonManifestOut_Click()
                         rs.Edit
                         rs!LOC_Date_OUT = dateOut
                         rs("Manifest_ID_Out") = manifestOutId
-                        rs("LOC_Selected") = False 'The other way to refer to a field, same thing as the row above
+                        rs("LOC_Selected") = False
                         rs("LOC_AUMs_USED") = metabolicFunctAUM(rs("BOV_Weight"), 1, seasonalFactorTotal(rs!LOC_Date_IN, rs!LOC_Date_OUT))
                         totalAUMs = totalAUMs + metabolicFunctAUM(rs("BOV_Weight"), 1, seasonalFactorTotal(rs!LOC_Date_IN, rs!LOC_Date_OUT))
                         rs("LOC_Manifest_Out") = True
                         rs.Update
     
-                        'Move to the next record.
+                        'Move to the next record
                         countCows = countCows + 1
                     End If
                 End If
@@ -163,13 +163,13 @@ Private Sub buttonManifestOut_Click()
                         rs.Edit
                         rs!LOC_Date_OUT = dateOut
                         rs("Manifest_ID_Out") = manifestOutId
-                        rs("LOC_Selected") = False 'The other way to refer to a field, same thing as the row above
+                        rs("LOC_Selected") = False
                         rs("LOC_AUMs_USED") = metabolicFunctAUM(rs("BOV_Weight"), 1, seasonalFactorTotal(rs!LOC_Date_IN, rs!LOC_Date_OUT))
                         totalAUMs = totalAUMs + metabolicFunctAUM(rs("BOV_Weight"), 1, seasonalFactorTotal(rs!LOC_Date_IN, rs!LOC_Date_OUT))
                         rs("LOC_Manifest_Out") = True
                         rs.Update
     
-                        'Move to the next record.
+                        'Move to the next record
                         countCalves = countCalves + 1
                     End If
                 End If
@@ -182,13 +182,13 @@ Private Sub buttonManifestOut_Click()
                         rs.Edit
                         rs!LOC_Date_OUT = dateOut
                         rs("Manifest_ID_Out") = manifestOutId
-                        rs("LOC_Selected") = False 'The other way to refer to a field, same thing as the row above
+                        rs("LOC_Selected") = False
                         rs("LOC_AUMs_USED") = metabolicFunctAUM(rs("BOV_Weight"), 1, seasonalFactorTotal(rs!LOC_Date_IN, rs!LOC_Date_OUT))
                         totalAUMs = totalAUMs + metabolicFunctAUM(rs("BOV_Weight"), 1, seasonalFactorTotal(rs!LOC_Date_IN, rs!LOC_Date_OUT))
                         rs("LOC_Manifest_Out") = True
                         rs.Update
     
-                        'Move to the next record. 
+                        'Move to the next record
                         countYearlings = countYearlings + 1
                     End If
                  End If
